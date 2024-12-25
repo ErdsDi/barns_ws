@@ -1,0 +1,4 @@
+source;share/pickn_place/local_setup.bash
+source;share/pickn_place/local_setup.dsv
+source;share/pickn_place/local_setup.sh
+source;share/pickn_place/local_setup.zsh

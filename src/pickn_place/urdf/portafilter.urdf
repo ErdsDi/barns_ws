@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Base link with STL mesh -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <!-- Adjust the mesh filename and scale as needed -->
+        <mesh filename="package://pickn_place/meshes/my_part.stl" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="grey">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="package://pickn_place/meshes/my_part.stl" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+    </inertial>
+  </link>
+
+  <!-- Joint to connect base_link to the "world" frame (so it appears in RViz) -->
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Additional link to show a custom frame or sensor, etc. -->
+  <link name="camera_link">
+    <visual>
+      <!-- Simple box just to visualize the frame -->
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+      <origin xyz="0 0.2 0.1" rpy="0 0 0"/>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- Joint between base_link and camera_link -->
+  <joint name="base_to_camera" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0 0.2 0.1" rpy="0 0 0"/>
+  </joint>
+
+</robot>
+

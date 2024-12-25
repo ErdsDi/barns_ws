@@ -1,0 +1,21 @@
+[1.096s] Invoking command in '/home/erds/barns_ws/src/dobot_demo': PYTHONPATH=/home/erds/barns_ws/build/dobot_demo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/erds/barns_ws/install/dobot_demo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dobot_demo build --build-base /home/erds/barns_ws/build/dobot_demo/build install --record /home/erds/barns_ws/build/dobot_demo/install.log --single-version-externally-managed install_data
+[1.284s] running egg_info
+[1.284s] writing ../../build/dobot_demo/dobot_demo.egg-info/PKG-INFO
+[1.285s] writing dependency_links to ../../build/dobot_demo/dobot_demo.egg-info/dependency_links.txt
+[1.285s] writing entry points to ../../build/dobot_demo/dobot_demo.egg-info/entry_points.txt
+[1.285s] writing requirements to ../../build/dobot_demo/dobot_demo.egg-info/requires.txt
+[1.285s] writing top-level names to ../../build/dobot_demo/dobot_demo.egg-info/top_level.txt
+[1.286s] reading manifest file '../../build/dobot_demo/dobot_demo.egg-info/SOURCES.txt'
+[1.287s] writing manifest file '../../build/dobot_demo/dobot_demo.egg-info/SOURCES.txt'
+[1.287s] running build
+[1.287s] running build_py
+[1.287s] running install
+[1.287s] running install_lib
+[1.288s] running install_data
+[1.288s] running install_egg_info
+[1.290s] removing '/home/erds/barns_ws/install/dobot_demo/lib/python3.10/site-packages/dobot_demo-0.0.0-py3.10.egg-info' (and everything under it)
+[1.290s] Copying ../../build/dobot_demo/dobot_demo.egg-info to /home/erds/barns_ws/install/dobot_demo/lib/python3.10/site-packages/dobot_demo-0.0.0-py3.10.egg-info
+[1.291s] running install_scripts
+[1.308s] Installing demo script to /home/erds/barns_ws/install/dobot_demo/lib/dobot_demo
+[1.308s] writing list of installed files to '/home/erds/barns_ws/build/dobot_demo/install.log'
+[1.338s] Invoked command in '/home/erds/barns_ws/src/dobot_demo' returned '0': PYTHONPATH=/home/erds/barns_ws/build/dobot_demo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/erds/barns_ws/install/dobot_demo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dobot_demo build --build-base /home/erds/barns_ws/build/dobot_demo/build install --record /home/erds/barns_ws/build/dobot_demo/install.log --single-version-externally-managed install_data

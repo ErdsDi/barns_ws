@@ -1,0 +1,9 @@
+/home/erds/barns_ws/build/pickn_place/CMakeFiles/uninstall.dir
+/home/erds/barns_ws/build/pickn_place/CMakeFiles/pickn_place_uninstall.dir
+/home/erds/barns_ws/build/pickn_place/CMakeFiles/test.dir
+/home/erds/barns_ws/build/pickn_place/CMakeFiles/edit_cache.dir
+/home/erds/barns_ws/build/pickn_place/CMakeFiles/rebuild_cache.dir
+/home/erds/barns_ws/build/pickn_place/CMakeFiles/list_install_components.dir
+/home/erds/barns_ws/build/pickn_place/CMakeFiles/install.dir
+/home/erds/barns_ws/build/pickn_place/CMakeFiles/install/local.dir
+/home/erds/barns_ws/build/pickn_place/CMakeFiles/install/strip.dir

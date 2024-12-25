@@ -1,0 +1,27 @@
+[0.240s] Invoking command in '/home/erds/barns_ws/build/dobot_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/erds/ws_moveit/install/launch_param_builder:/home/erds/barns_ws/install/servo_action:/home/erds/barns_ws/install/dobot_bringup_v3:/home/erds/barns_ws/install/dobot_moveit:/home/erds/barns_ws/install/dobot_demo:/opt/ros/humble /usr/bin/cmake --build /home/erds/barns_ws/build/dobot_gazebo -- -j16 -l16
+[0.688s] Invoked command in '/home/erds/barns_ws/build/dobot_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/erds/ws_moveit/install/launch_param_builder:/home/erds/barns_ws/install/servo_action:/home/erds/barns_ws/install/dobot_bringup_v3:/home/erds/barns_ws/install/dobot_moveit:/home/erds/barns_ws/install/dobot_demo:/opt/ros/humble /usr/bin/cmake --build /home/erds/barns_ws/build/dobot_gazebo -- -j16 -l16
+[0.689s] Invoking command in '/home/erds/barns_ws/build/dobot_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/erds/ws_moveit/install/launch_param_builder:/home/erds/barns_ws/install/servo_action:/home/erds/barns_ws/install/dobot_bringup_v3:/home/erds/barns_ws/install/dobot_moveit:/home/erds/barns_ws/install/dobot_demo:/opt/ros/humble /usr/bin/cmake --install /home/erds/barns_ws/build/dobot_gazebo
+[0.717s] -- Install configuration: ""
+[0.717s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/launch
+[0.717s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/launch/gazebo_moveit.launch.py
+[0.718s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/launch/dobot_gazebo.launch.py
+[0.718s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/worlds
+[0.719s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/worlds/ur10.world
+[0.719s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/config
+[0.719s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/config/moveitcpp.rviz
+[0.719s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/ament_index/resource_index/package_run_dependencies/dobot_gazebo
+[0.719s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/ament_index/resource_index/parent_prefix_path/dobot_gazebo
+[0.719s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/environment/ament_prefix_path.sh
+[0.719s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/environment/ament_prefix_path.dsv
+[0.719s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/environment/path.sh
+[0.720s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/environment/path.dsv
+[0.720s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/local_setup.bash
+[0.720s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/local_setup.sh
+[0.720s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/local_setup.zsh
+[0.720s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/local_setup.dsv
+[0.720s] -- Installing: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/package.dsv
+[0.720s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/ament_index/resource_index/packages/dobot_gazebo
+[0.720s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/cmake/dobot_gazeboConfig.cmake
+[0.720s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/cmake/dobot_gazeboConfig-version.cmake
+[0.720s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/package.xml
+[0.904s] Invoked command in '/home/erds/barns_ws/build/dobot_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/erds/ws_moveit/install/launch_param_builder:/home/erds/barns_ws/install/servo_action:/home/erds/barns_ws/install/dobot_bringup_v3:/home/erds/barns_ws/install/dobot_moveit:/home/erds/barns_ws/install/dobot_demo:/opt/ros/humble /usr/bin/cmake --install /home/erds/barns_ws/build/dobot_gazebo
