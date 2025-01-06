@@ -218,12 +218,19 @@
     <child link="portafilter_offset_link"/>
     <origin xyz="0 0 0.26" rpy="-0.175 0 0"/>
   </joint>
-
-  <link name="cup_offset_link"/>
-  <joint name="cup_offset_joint" type="fixed">
+  
+  <link name="tool_link"/>
+  <joint name="tool_joint" type="fixed">
     <parent link="Link6"/>
-    <child link="cup_offset_link"/>
-    <origin xyz="0 0 0.15" rpy="0 0 0"/>
+    <child link="tool_link"/>
+    <origin xyz="0 0 0.1285" rpy="0 0 0"/>
+  </joint>
+  
+  <link name="calibration_link"/>
+  <joint name="calibration_joint" type="fixed">
+    <parent link="Link6"/>
+    <child link="calibration_link"/>
+    <origin xyz="0 -0.023 0.357" rpy="0 -2.10155463 1.5708"/>
   </joint>
   
   ---------------------------------------------------------------------------------------------------------

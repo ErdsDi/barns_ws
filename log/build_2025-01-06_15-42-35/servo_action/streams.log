@@ -1,0 +1,25 @@
+[1.585s] Invoking command in '/home/erds/barns_ws/src/servo_action': PYTHONPATH=/home/erds/barns_ws/build/servo_action/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/erds/barns_ws/install/servo_action/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/servo_action build --build-base /home/erds/barns_ws/build/servo_action/build install --record /home/erds/barns_ws/build/servo_action/install.log --single-version-externally-managed install_data
+[1.829s] running egg_info
+[1.829s] writing ../../build/servo_action/servo_action.egg-info/PKG-INFO
+[1.830s] writing dependency_links to ../../build/servo_action/servo_action.egg-info/dependency_links.txt
+[1.830s] writing entry points to ../../build/servo_action/servo_action.egg-info/entry_points.txt
+[1.830s] writing requirements to ../../build/servo_action/servo_action.egg-info/requires.txt
+[1.830s] writing top-level names to ../../build/servo_action/servo_action.egg-info/top_level.txt
+[1.832s] reading manifest file '../../build/servo_action/servo_action.egg-info/SOURCES.txt'
+[1.832s] writing manifest file '../../build/servo_action/servo_action.egg-info/SOURCES.txt'
+[1.833s] running build
+[1.833s] running build_py
+[1.833s] running install
+[1.833s] running install_lib
+[1.835s] running install_data
+[1.835s] running install_egg_info
+[1.837s] removing '/home/erds/barns_ws/install/servo_action/lib/python3.10/site-packages/servo_action-0.0.0-py3.10.egg-info' (and everything under it)
+[1.837s] Copying ../../build/servo_action/servo_action.egg-info to /home/erds/barns_ws/install/servo_action/lib/python3.10/site-packages/servo_action-0.0.0-py3.10.egg-info
+[1.838s] running install_scripts
+[1.865s] Installing Joint_Position script to /home/erds/barns_ws/install/servo_action/lib/servo_action
+[1.865s] Installing action_move_client script to /home/erds/barns_ws/install/servo_action/lib/servo_action
+[1.865s] Installing action_move_client_reality script to /home/erds/barns_ws/install/servo_action/lib/servo_action
+[1.865s] Installing action_move_server script to /home/erds/barns_ws/install/servo_action/lib/servo_action
+[1.865s] Installing action_move_server_reality script to /home/erds/barns_ws/install/servo_action/lib/servo_action
+[1.866s] writing list of installed files to '/home/erds/barns_ws/build/servo_action/install.log'
+[1.901s] Invoked command in '/home/erds/barns_ws/src/servo_action' returned '0': PYTHONPATH=/home/erds/barns_ws/build/servo_action/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/erds/barns_ws/install/servo_action/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/servo_action build --build-base /home/erds/barns_ws/build/servo_action/build install --record /home/erds/barns_ws/build/servo_action/install.log --single-version-externally-managed install_data

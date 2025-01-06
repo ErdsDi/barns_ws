@@ -1,0 +1,5 @@
+[console_scripts]
+aruco_perception = pickn_place.aruco_perception:main
+calibrate_aruco = pickn_place.calibrate_aruco:main
+perception_transform = pickn_place.perception_transform:main
+
