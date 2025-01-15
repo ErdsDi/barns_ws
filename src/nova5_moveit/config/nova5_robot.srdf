@@ -8,8 +8,8 @@
 	<chain base_link="base_link" tip_link="portafilter_offset_link"/>
     </group>
 
-    <group name="pickedup_cup">
-	<chain base_link="base_link" tip_link="cup_offset_link"/>
+    <group name="center_tool_link">
+	<chain base_link="base_link" tip_link="tool_link"/>
     </group>
 
     <group name="gripper_group">

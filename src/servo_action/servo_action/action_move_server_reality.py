@@ -48,7 +48,7 @@ class MoveCircleActionServer(Node):
             for i in self.adc:
                self.ServoJ_C(i[0],i[1],i[2],i[3],i[4],i[5])
                print(f"ServoJ:{i}")
-               time.sleep(0.25)
+               time.sleep(0.4)
             self.Trajectory = False
         else:
             print("No data.....")

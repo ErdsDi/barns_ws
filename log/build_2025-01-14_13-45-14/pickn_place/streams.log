@@ -1,0 +1,44 @@
+[1.327s] Invoking command in '/home/erds/barns_ws/src/pickn_place': PYTHONPATH=/home/erds/barns_ws/build/pickn_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pickn_place build --build-base /home/erds/barns_ws/build/pickn_place/build install --record /home/erds/barns_ws/build/pickn_place/install.log --single-version-externally-managed install_data
+[1.472s] /home/erds/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:270: UserWarning: Unknown distribution option: 'tests_require'
+[1.472s]   warnings.warn(msg)
+[1.584s] running egg_info
+[1.603s] writing ../../build/pickn_place/pickn_place.egg-info/PKG-INFO
+[1.604s] writing dependency_links to ../../build/pickn_place/pickn_place.egg-info/dependency_links.txt
+[1.604s] writing entry points to ../../build/pickn_place/pickn_place.egg-info/entry_points.txt
+[1.604s] writing requirements to ../../build/pickn_place/pickn_place.egg-info/requires.txt
+[1.604s] writing top-level names to ../../build/pickn_place/pickn_place.egg-info/top_level.txt
+[1.642s] reading manifest file '../../build/pickn_place/pickn_place.egg-info/SOURCES.txt'
+[1.643s] writing manifest file '../../build/pickn_place/pickn_place.egg-info/SOURCES.txt'
+[1.643s] running build
+[1.644s] running build_py
+[1.644s] copying pickn_place/move.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+[1.644s] copying pickn_place/mount_frame_generator.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+[1.644s] copying pickn_place/calibrate_aruco.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+[1.645s] copying pickn_place/aruco_perception.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+[1.645s] copying pickn_place/perception_transform.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+[1.645s] copying pickn_place/calibrate_tool_mount.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+[1.645s] copying pickn_place/move2.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+[1.646s] running install
+[1.650s] running install_lib
+[1.669s] copying /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place/mount_frame_generator.py -> /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place
+[1.669s] copying /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place/perception_transform.py -> /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place
+[1.669s] copying /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place/calibrate_tool_mount.py -> /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place
+[1.670s] byte-compiling /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place/mount_frame_generator.py to mount_frame_generator.cpython-310.pyc
+[1.672s] byte-compiling /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place/perception_transform.py to perception_transform.cpython-310.pyc
+[1.675s] byte-compiling /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place/calibrate_tool_mount.py to calibrate_tool_mount.cpython-310.pyc
+[1.676s] running install_data
+[1.677s] copying package.xml -> /home/erds/barns_ws/install/pickn_place/share/pickn_place
+[1.677s] copying share/aruco_config.yaml -> /home/erds/barns_ws/install/pickn_place/share/pickn_place
+[1.677s] copying share/aruco_calibration.yaml -> /home/erds/barns_ws/install/pickn_place/share/pickn_place
+[1.678s] copying share/arucoID_match.yaml -> /home/erds/barns_ws/install/pickn_place/share/pickn_place
+[1.678s] copying share/Aruco_11_offsets.yaml -> /home/erds/barns_ws/install/pickn_place/share/pickn_place
+[1.678s] running install_egg_info
+[1.699s] removing '/home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place-0.0.0-py3.10.egg-info' (and everything under it)
+[1.700s] Copying ../../build/pickn_place/pickn_place.egg-info to /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place-0.0.0-py3.10.egg-info
+[1.701s] running install_scripts
+[1.847s] Installing aruco_perception script to /home/erds/barns_ws/install/pickn_place/lib/pickn_place
+[1.847s] Installing calibrate_aruco script to /home/erds/barns_ws/install/pickn_place/lib/pickn_place
+[1.847s] Installing mount_frame_generator script to /home/erds/barns_ws/install/pickn_place/lib/pickn_place
+[1.847s] Installing perception_transform script to /home/erds/barns_ws/install/pickn_place/lib/pickn_place
+[1.847s] writing list of installed files to '/home/erds/barns_ws/build/pickn_place/install.log'
+[1.886s] Invoked command in '/home/erds/barns_ws/src/pickn_place' returned '0': PYTHONPATH=/home/erds/barns_ws/build/pickn_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pickn_place build --build-base /home/erds/barns_ws/build/pickn_place/build install --record /home/erds/barns_ws/build/pickn_place/install.log --single-version-externally-managed install_data

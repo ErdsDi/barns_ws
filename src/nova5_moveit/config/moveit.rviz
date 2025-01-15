@@ -5,9 +5,10 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
+        - /MotionPlanning1/Planned Path1
         - /TF1
         - /TF1/Frames1
-      Splitter Ratio: 0.5
+      Splitter Ratio: 0.5030180811882019
     Tree Height: 230
   - Class: rviz_common/Help
     Name: Help
@@ -37,7 +38,7 @@ Visualization Manager:
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
-    - Acceleration_Scaling_Factor: 0.1
+    - Acceleration_Scaling_Factor: 0.4
       Class: moveit_rviz_plugin/MotionPlanning
       Enabled: true
       Move Group Namespace: ""
@@ -174,7 +175,7 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-        Loop Animation: true
+        Loop Animation: false
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
         Show Robot Collision: false
@@ -197,7 +198,7 @@ Visualization Manager:
         Goal State Color: 250; 128; 0
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
-        Planning Group: gripper_group
+        Planning Group: nova5_group
         Query Goal State: true
         Query Start State: false
         Show Workspace: false
@@ -330,7 +331,7 @@ Visualization Manager:
         Show Robot Collision: false
         Show Robot Visual: true
       Value: true
-      Velocity_Scaling_Factor: 0.1
+      Velocity_Scaling_Factor: 0.5
     - Class: rviz_default_plugins/TF
       Enabled: true
       Frame Timeout: 15
@@ -348,11 +349,11 @@ Visualization Manager:
           Value: false
         Link6:
           Value: false
-        aruco_marker:
-          Value: true
         base_link:
           Value: false
         calibration_link:
+          Value: false
+        calibration_mount:
           Value: true
         camera_color_frame:
           Value: false
@@ -388,6 +389,10 @@ Visualization Manager:
           Value: false
         robotiq_85_base_link:
           Value: false
+        test_approach_link:
+          Value: true
+        test_mount_link:
+          Value: true
         tool_link:
           Value: false
       Marker Scale: 1
@@ -416,8 +421,7 @@ Visualization Manager:
                                   {}
                               camera_depth_frame:
                                 camera_depth_optical_frame:
-                                  aruco_marker:
-                                    {}
+                                  {}
                           left_inner_knuckle:
                             left_inner_finger:
                               {}
@@ -432,6 +436,11 @@ Visualization Manager:
                               {}
                         tool_link:
                           {}
+            calibration_mount:
+              test_approach_link:
+                {}
+              test_mount_link:
+                {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -452,25 +461,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 2.9696474075317383
+      Distance: 1.2953910827636719
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.22399045526981354
-        Y: 0.18952548503875732
-        Z: 0.31934189796447754
+        X: -0.6032463908195496
+        Y: 0.05669347941875458
+        Z: 0.3593737483024597
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5499999523162842
+      Pitch: 0.35999929904937744
       Target Frame: dummy_link
       Value: Orbit (rviz_default_plugins)
-      Yaw: 5.140174388885498
+      Yaw: 1.7501647472381592
     Saved: ~
 Window Geometry:
   Displays:

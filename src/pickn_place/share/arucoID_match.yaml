@@ -1,9 +1,7 @@
 aruco_id:
-  - id: 13
+  - id: 18
     name: portafilter
-  - id: 14
-    name: test_name
-  - id: 38
+  - id: 39
     name: calibration_marker
-  - id: 41
-    name: cofee_machine
+  - id: 11
+    name: tool_calibration

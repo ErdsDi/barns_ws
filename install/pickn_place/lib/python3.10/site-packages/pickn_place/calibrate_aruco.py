@@ -17,12 +17,13 @@ from tf_transformations import (
     quaternion_from_euler
 )
 
+
 class ArUcoCalibrationNode(Node):
     def __init__(self):
         super().__init__('aruco_calibration_rpy_node')
 
         # ----------------------------
-        # Configuration parameters
+        # Configuration parameters for calibration
         # ----------------------------
         self.BUFFER_SIZE = 30     # Number of poses to accumulate
         self.IQR_MULTIPLIER = 1   # For outlier removal
@@ -31,6 +32,9 @@ class ArUcoCalibrationNode(Node):
 
         # Buffer to hold the incoming PoseStamped messages
         self.pose_buffer = []
+
+        # Flag to track if we've already saved calibration
+        self.calibration_done = False
 
         # TF Tools
         self.tf_buffer = tf2_ros.Buffer()
@@ -55,6 +59,10 @@ class ArUcoCalibrationNode(Node):
         self.get_logger().info("ArUco calibration node (RPY version) initialized.")
 
     def aruco_pose_callback(self, msg: PoseStamped):
+        # If calibration is already done, skip processing
+        if self.calibration_done:
+            return
+
         # Collect the poses into a buffer
         self.pose_buffer.append(msg)
 
@@ -64,6 +72,14 @@ class ArUcoCalibrationNode(Node):
             self.pose_buffer.clear()
 
     def process_buffer(self):
+        """
+        Processes the accumulated poses, computes the transform offset,
+        and saves the calibration data to a YAML file (only once).
+        """
+        # If calibration is already done, skip
+        if self.calibration_done:
+            return
+
         try:
             # ----------------------------
             # 1) Filter / average the ArUco poses
@@ -109,7 +125,7 @@ class ArUcoCalibrationNode(Node):
             # ----------------------------
             try:
                 t_calib = self.tf_buffer.lookup_transform(
-                    self.base_link_frame,        
+                    self.base_link_frame,
                     self.calibration_link_frame,
                     rclpy.time.Time(),
                     timeout=rclpy.duration.Duration(seconds=1.0)
@@ -150,12 +166,8 @@ class ArUcoCalibrationNode(Node):
             # (Optional) Adjust RPY if needed:
             # For example, if your marker is physically rotated so that
             # the Z-axis is "sideways," you could do something like:
-            #
             # roll -= np.pi / 2
-            #
-            # Or yaw += np.pi/2, etc. 
-            #
-            # For now, let's leave them as-is.
+            # Or yaw += np.pi / 2, etc.
 
             # ----------------------------
             # 5) Convert back to quaternion
@@ -163,10 +175,11 @@ class ArUcoCalibrationNode(Node):
             diff_quat_rpy = quaternion_from_euler(roll, pitch, yaw)
 
             # ----------------------------
-            # 6) Save difference to YAML
+            # 6) Save difference to YAML (only once)
             # ----------------------------
             self.save_calibration_to_yaml(diff_translation, diff_quat_rpy)
-            self.get_logger().info("Calibration data saved to aruco_calibration.yaml.")
+            # Mark calibration as done
+            self.calibration_done = True
 
         except Exception as e:
             self.get_logger().error(f"Calibration processing failed: {e}")
@@ -179,11 +192,11 @@ class ArUcoCalibrationNode(Node):
         t.header.stamp = self.get_clock().now().to_msg()
         t.header.frame_id = parent_frame
         t.child_frame_id = child_frame
-        
+
         t.transform.translation.x = position[0]
         t.transform.translation.y = position[1]
         t.transform.translation.z = position[2]
-        
+
         t.transform.rotation.x = orientation[0]
         t.transform.rotation.y = orientation[1]
         t.transform.rotation.z = orientation[2]
@@ -248,7 +261,7 @@ class ArUcoCalibrationNode(Node):
         try:
             with open(out_file, 'w') as f:
                 yaml.dump(calibration_data, f, default_flow_style=False)
-            self.get_logger().info(f"Saved calibration file to {out_file}")
+            self.get_logger().info(f"calibration file saved to {out_file}")
         except Exception as e:
             self.get_logger().error(f"Failed to write calibration file to {out_file}: {e}")
 
@@ -263,6 +276,7 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()

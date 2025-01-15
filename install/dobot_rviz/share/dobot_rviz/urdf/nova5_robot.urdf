@@ -55,7 +55,7 @@
     <parent link="base_link" />
     <child link="Link1" />
     <axis xyz="0 0 0.999999999999855" />
-    <limit lower="-6.28" upper="6.28" effort="0" velocity="0" />
+    <limit lower="-6.2" upper="1" effort="0" velocity="0" />
   </joint>
 
   <link name="Link2">
@@ -115,7 +115,7 @@
     <parent link="Link2" />
     <child link="Link3" />
     <axis xyz="0 0 1" />
-    <limit lower="-2.79" upper="2.79" effort="0" velocity="0" />
+    <limit lower="0" upper="2.79" effort="0" velocity="0" />
   </joint>
 
   <link name="Link4">

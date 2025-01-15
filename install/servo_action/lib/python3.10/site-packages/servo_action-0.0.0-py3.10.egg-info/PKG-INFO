@@ -1,12 +1,13 @@
-Metadata-Version: 2.1
-Name: servo-action
+Metadata-Version: 2.2
+Name: servo_action
 Version: 0.0.0
 Summary: TODO: Package description
-Home-page: UNKNOWN
 Maintainer: dobot
 Maintainer-email: dobot@todo.todo
 License: TODO: License declaration
-Platform: UNKNOWN
-
-UNKNOWN
-
+Requires-Dist: setuptools
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary

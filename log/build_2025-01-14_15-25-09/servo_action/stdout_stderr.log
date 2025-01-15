@@ -1,0 +1,27 @@
+/home/erds/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:270: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running egg_info
+writing ../../build/servo_action/servo_action.egg-info/PKG-INFO
+writing dependency_links to ../../build/servo_action/servo_action.egg-info/dependency_links.txt
+writing entry points to ../../build/servo_action/servo_action.egg-info/entry_points.txt
+writing requirements to ../../build/servo_action/servo_action.egg-info/requires.txt
+writing top-level names to ../../build/servo_action/servo_action.egg-info/top_level.txt
+reading manifest file '../../build/servo_action/servo_action.egg-info/SOURCES.txt'
+writing manifest file '../../build/servo_action/servo_action.egg-info/SOURCES.txt'
+running build
+running build_py
+copying servo_action/action_move_server_reality.py -> /home/erds/barns_ws/build/servo_action/build/lib/servo_action
+copying servo_action/action_move_client_reality.py -> /home/erds/barns_ws/build/servo_action/build/lib/servo_action
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/erds/barns_ws/install/servo_action/lib/python3.10/site-packages/servo_action-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/servo_action/servo_action.egg-info to /home/erds/barns_ws/install/servo_action/lib/python3.10/site-packages/servo_action-0.0.0-py3.10.egg-info
+running install_scripts
+Installing Joint_Position script to /home/erds/barns_ws/install/servo_action/lib/servo_action
+Installing action_move_client script to /home/erds/barns_ws/install/servo_action/lib/servo_action
+Installing action_move_client_reality script to /home/erds/barns_ws/install/servo_action/lib/servo_action
+Installing action_move_server script to /home/erds/barns_ws/install/servo_action/lib/servo_action
+Installing action_move_server_reality script to /home/erds/barns_ws/install/servo_action/lib/servo_action
+writing list of installed files to '/home/erds/barns_ws/build/servo_action/install.log'

@@ -9,35 +9,35 @@ default_acceleration_scaling_factor: 0.1
 # Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
 joint_limits:
   joint1:
-    has_velocity_limits: false
-    max_velocity: 0
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_velocity_limits: true
+    max_velocity: 1.745  # rad/s
+    has_acceleration_limits: true
+    max_acceleration: 5.236  # rad/s²
   joint2:
-    has_velocity_limits: false
-    max_velocity: 0
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_velocity_limits: true
+    max_velocity: 1.745  # rad/s
+    has_acceleration_limits: true
+    max_acceleration: 5.236  # rad/s²
   joint3:
-    has_velocity_limits: false
-    max_velocity: 0
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_velocity_limits: true
+    max_velocity: 1.745  # rad/s
+    has_acceleration_limits: true
+    max_acceleration: 5.236  # rad/s²
   joint4:
-    has_velocity_limits: false
-    max_velocity: 0
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_velocity_limits: true
+    max_velocity: 1.745  # rad/s
+    has_acceleration_limits: true
+    max_acceleration: 8.727  # rad/s²
   joint5:
-    has_velocity_limits: false
-    max_velocity: 0
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_velocity_limits: true
+    max_velocity: 1.745  # rad/s
+    has_acceleration_limits: true
+    max_acceleration: 8.727  # rad/s²
   joint6:
-    has_velocity_limits: false
-    max_velocity: 0
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_velocity_limits: true
+    max_velocity: 1.745  # rad/s
+    has_acceleration_limits: true
+    max_acceleration: 8.727  # rad/s²
 finger_joint:
   has_position_limits: true
   min_position: 0.0
@@ -46,4 +46,3 @@ finger_joint:
     position: 0.3
     tolerance_above: 0.05
     tolerance_below: 0.05
-

@@ -1,0 +1,40 @@
+/home/erds/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:270: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running egg_info
+writing ../../build/pickn_place/pickn_place.egg-info/PKG-INFO
+writing dependency_links to ../../build/pickn_place/pickn_place.egg-info/dependency_links.txt
+writing entry points to ../../build/pickn_place/pickn_place.egg-info/entry_points.txt
+writing requirements to ../../build/pickn_place/pickn_place.egg-info/requires.txt
+writing top-level names to ../../build/pickn_place/pickn_place.egg-info/top_level.txt
+reading manifest file '../../build/pickn_place/pickn_place.egg-info/SOURCES.txt'
+writing manifest file '../../build/pickn_place/pickn_place.egg-info/SOURCES.txt'
+running build
+running build_py
+copying pickn_place/move.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+copying pickn_place/mount_frame_generator.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+copying pickn_place/calibrate_aruco.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+copying pickn_place/aruco_perception.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+copying pickn_place/perception_transform.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+copying pickn_place/calibrate_tool_mount.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+copying pickn_place/move2.py -> /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place
+running install
+running install_lib
+copying /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place/move.py -> /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place
+copying /home/erds/barns_ws/build/pickn_place/build/lib/pickn_place/mount_frame_generator.py -> /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place
+byte-compiling /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place/move.py to move.cpython-310.pyc
+byte-compiling /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place/mount_frame_generator.py to mount_frame_generator.cpython-310.pyc
+running install_data
+copying package.xml -> /home/erds/barns_ws/install/pickn_place/share/pickn_place
+copying share/aruco_config.yaml -> /home/erds/barns_ws/install/pickn_place/share/pickn_place
+copying share/aruco_calibration.yaml -> /home/erds/barns_ws/install/pickn_place/share/pickn_place
+copying share/arucoID_match.yaml -> /home/erds/barns_ws/install/pickn_place/share/pickn_place
+copying share/portafilter_offsets.yaml -> /home/erds/barns_ws/install/pickn_place/share/pickn_place
+running install_egg_info
+removing '/home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/pickn_place/pickn_place.egg-info to /home/erds/barns_ws/install/pickn_place/lib/python3.10/site-packages/pickn_place-0.0.0-py3.10.egg-info
+running install_scripts
+Installing aruco_perception script to /home/erds/barns_ws/install/pickn_place/lib/pickn_place
+Installing calibrate_aruco script to /home/erds/barns_ws/install/pickn_place/lib/pickn_place
+Installing mount_frame_generator script to /home/erds/barns_ws/install/pickn_place/lib/pickn_place
+Installing perception_transform script to /home/erds/barns_ws/install/pickn_place/lib/pickn_place
+writing list of installed files to '/home/erds/barns_ws/build/pickn_place/install.log'

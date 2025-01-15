@@ -11,11 +11,16 @@ setup.py
 pickn_place/__init__.py
 pickn_place/aruco_perception.py
 pickn_place/calibrate_aruco.py
+pickn_place/calibrate_tool_mount.py
+pickn_place/mount_frame_generator.py
+pickn_place/move.py
+pickn_place/move2.py
 pickn_place/perception_transform.py
 resource/pickn_place
 share/arucoID_match.yaml
 share/aruco_calibration.yaml
 share/aruco_config.yaml
+share/mount_offsets.yaml
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py

@@ -5,7 +5,7 @@ from cv_bridge import CvBridge
 from sensor_msgs.msg import Image, CameraInfo
 from geometry_msgs.msg import PoseStamped
 from transformations import quaternion_from_matrix
-from std_msgs.msg import Int32  # <-- NEW: For publishing the target ID
+from std_msgs.msg import Int32
 import numpy as np
 import os
 import yaml
@@ -21,12 +21,17 @@ class ArucoPerceptionNode(Node):
         # ---------------------------
         # 1. Declare ROS parameters
         # ---------------------------
-        self.declare_parameter('target_marker_id', 42)
+        self.declare_parameter('target_marker_id', 20)
         self.TARGET_MARKER_ID = self.get_parameter('target_marker_id').get_parameter_value().integer_value
         self.last_logged_id = None
 
         self.declare_parameter('visualize', True)
         self.VISUALIZE = self.get_parameter('visualize').get_parameter_value().bool_value
+
+        # ** NEW PARAMETER: Distance threshold in mm **
+        # If marker is CLOSER than this threshold, use PnP. Otherwise, use Depth.
+        self.declare_parameter('depth_dist_threshold_mm', 300.0)
+        self.DEPTH_DIST_THRESHOLD_MM = self.get_parameter('depth_dist_threshold_mm').get_parameter_value().double_value
 
         # -----------------------------------
         # 2. Basic settings and placeholders
@@ -42,7 +47,7 @@ class ArucoPerceptionNode(Node):
         self.bridge = CvBridge()
 
         # ArUco detection parameters
-        self.aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_5X5_50)
+        self.aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
         self.aruco_params = cv2.aruco.DetectorParameters()
         self.aruco_params.adaptiveThreshWinSizeMin = 3
         self.aruco_params.adaptiveThreshWinSizeMax = 9
@@ -264,37 +269,45 @@ class ArucoPerceptionNode(Node):
                 if not success or (inliers is not None and len(inliers) < self.REPROJECTION_ERROR_THRESHOLD):
                     continue
 
-                # Default to PnP distance
+                # By default, use PnP distance
                 final_tvec = tvec.copy()  # (3,1)
                 distance_source = "PnP"
                 distance_mm = np.linalg.norm(tvec) * 1000.0  # mm
 
                 # -------------------------------------------
                 # B) Attempt to get a valid depth-based dist
+                #    Use Depth only if distance_mm > threshold
                 # -------------------------------------------
                 if (self.latest_depth_image is not None and
                     0 <= center_2d[0] < self.depth_width and
                     0 <= center_2d[1] < self.depth_height):
-                    
+
                     raw_depth = self.latest_depth_image[center_2d[1], center_2d[0]]  # likely uint16
                     if raw_depth > 0:  # valid, non-zero depth reading
                         depth_m = float(raw_depth) / 1000.0  # convert mm -> meters
+                        depth_dist_mm = depth_m * 1000.0
 
-                        # Overwrite final_tvec with depth-based 3D position
-                        # Using depth camera intrinsics:
-                        fx = self.depth_camera_matrix[0, 0]
-                        fy = self.depth_camera_matrix[1, 1]
-                        cx = self.depth_camera_matrix[0, 2]
-                        cy = self.depth_camera_matrix[1, 2]
+                        # --------------------------
+                        # Check the threshold logic
+                        # --------------------------
+                        if distance_mm > self.DEPTH_DIST_THRESHOLD_MM:
+                            # Overwrite final_tvec with depth-based 3D position
+                            fx = self.depth_camera_matrix[0, 0]
+                            fy = self.depth_camera_matrix[1, 1]
+                            cx = self.depth_camera_matrix[0, 2]
+                            cy = self.depth_camera_matrix[1, 2]
 
-                        # (u, v) = (center_2d[0], center_2d[1])
-                        X = (center_2d[0] - cx) * depth_m / fx
-                        Y = (center_2d[1] - cy) * depth_m / fy
-                        Z = depth_m
+                            (u, v) = (center_2d[0], center_2d[1])
+                            X = (u - cx) * depth_m / fx
+                            Y = (v - cy) * depth_m / fy
+                            Z = depth_m
 
-                        final_tvec = np.array([[X], [Y], [Z]], dtype=np.float32)
-                        distance_source = "Depth"
-                        distance_mm = depth_m * 1000.0
+                            final_tvec = np.array([[X], [Y], [Z]], dtype=np.float32)
+                            distance_source = "Depth"
+                            distance_mm = depth_dist_mm
+                        else:
+                            # If below threshold, stick with PnP
+                            pass
 
                 # -------------------------------------
                 # C) Display only the chosen distance
@@ -357,6 +370,9 @@ class ArucoPerceptionNode(Node):
                     pose_stamped.pose.position.y = float(final_tvec[1])
                     pose_stamped.pose.position.z = float(final_tvec[2])
 
+                    # Convert Rodrigues -> quaternion
+                    # Note: The quaternion_from_matrix yields [x, y, z, w]
+                    # We often have to swap or negate certain components depending on the frame axes
                     pose_stamped.pose.orientation.z = -float(quat[0])
                     pose_stamped.pose.orientation.y = float(quat[1])
                     pose_stamped.pose.orientation.x = -float(quat[2])
@@ -392,6 +408,14 @@ class ArucoPerceptionNode(Node):
             elif param.name == 'visualize':
                 if param.type_ == Parameter.Type.BOOL:
                     self.VISUALIZE = param.value
+            # ** Update threshold parameter dynamically if changed **
+            elif param.name == 'depth_dist_threshold_mm':
+                if param.type_ in (Parameter.Type.INTEGER, Parameter.Type.DOUBLE):
+                    self.DEPTH_DIST_THRESHOLD_MM = float(param.value)
+                    self.get_logger().info(
+                        f"Depth distance threshold updated to {self.DEPTH_DIST_THRESHOLD_MM} mm"
+                    )
+
         return SetParametersResult(successful=True)
 
     # ----------------------

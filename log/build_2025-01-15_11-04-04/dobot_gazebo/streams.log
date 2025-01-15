@@ -1,0 +1,27 @@
+[0.294s] Invoking command in '/home/erds/barns_ws/build/dobot_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/erds/barns_ws/install/servo_action:/home/erds/barns_ws/install/pickn_place:/home/erds/barns_ws/install/dobot_bringup_v3:/home/erds/barns_ws/install/dobot_moveit:/home/erds/barns_ws/install/dobot_demo:/home/erds/ws_moveit/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --build /home/erds/barns_ws/build/dobot_gazebo -- -j16 -l16
+[0.872s] Invoked command in '/home/erds/barns_ws/build/dobot_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/erds/barns_ws/install/servo_action:/home/erds/barns_ws/install/pickn_place:/home/erds/barns_ws/install/dobot_bringup_v3:/home/erds/barns_ws/install/dobot_moveit:/home/erds/barns_ws/install/dobot_demo:/home/erds/ws_moveit/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --build /home/erds/barns_ws/build/dobot_gazebo -- -j16 -l16
+[0.873s] Invoking command in '/home/erds/barns_ws/build/dobot_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/erds/barns_ws/install/servo_action:/home/erds/barns_ws/install/pickn_place:/home/erds/barns_ws/install/dobot_bringup_v3:/home/erds/barns_ws/install/dobot_moveit:/home/erds/barns_ws/install/dobot_demo:/home/erds/ws_moveit/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --install /home/erds/barns_ws/build/dobot_gazebo
+[1.146s] -- Install configuration: ""
+[1.148s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/launch
+[1.148s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/launch/gazebo_moveit.launch.py
+[1.148s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/launch/dobot_gazebo.launch.py
+[1.148s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/worlds
+[1.148s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/worlds/ur10.world
+[1.148s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/config
+[1.148s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/config/moveitcpp.rviz
+[1.148s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/ament_index/resource_index/package_run_dependencies/dobot_gazebo
+[1.148s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/ament_index/resource_index/parent_prefix_path/dobot_gazebo
+[1.148s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/environment/ament_prefix_path.sh
+[1.149s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/environment/ament_prefix_path.dsv
+[1.149s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/environment/path.sh
+[1.149s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/environment/path.dsv
+[1.149s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/local_setup.bash
+[1.149s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/local_setup.sh
+[1.149s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/local_setup.zsh
+[1.149s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/local_setup.dsv
+[1.150s] -- Installing: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/package.dsv
+[1.150s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/ament_index/resource_index/packages/dobot_gazebo
+[1.150s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/cmake/dobot_gazeboConfig.cmake
+[1.150s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/cmake/dobot_gazeboConfig-version.cmake
+[1.150s] -- Up-to-date: /home/erds/barns_ws/install/dobot_gazebo/share/dobot_gazebo/package.xml
+[1.279s] Invoked command in '/home/erds/barns_ws/build/dobot_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/erds/barns_ws/install/servo_action:/home/erds/barns_ws/install/pickn_place:/home/erds/barns_ws/install/dobot_bringup_v3:/home/erds/barns_ws/install/dobot_moveit:/home/erds/barns_ws/install/dobot_demo:/home/erds/ws_moveit/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --install /home/erds/barns_ws/build/dobot_gazebo

@@ -1,0 +1,21 @@
+[1.184s] Invoking command in '/home/erds/barns_ws/src/dobot_moveit': PYTHONPATH=/home/erds/barns_ws/build/dobot_moveit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/erds/barns_ws/install/dobot_moveit/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dobot_moveit build --build-base /home/erds/barns_ws/build/dobot_moveit/build install --record /home/erds/barns_ws/build/dobot_moveit/install.log --single-version-externally-managed install_data
+[1.311s] /home/erds/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:270: UserWarning: Unknown distribution option: 'tests_require'
+[1.311s]   warnings.warn(msg)
+[1.395s] running egg_info
+[1.409s] writing ../../build/dobot_moveit/dobot_moveit.egg-info/PKG-INFO
+[1.409s] writing dependency_links to ../../build/dobot_moveit/dobot_moveit.egg-info/dependency_links.txt
+[1.409s] writing requirements to ../../build/dobot_moveit/dobot_moveit.egg-info/requires.txt
+[1.410s] writing top-level names to ../../build/dobot_moveit/dobot_moveit.egg-info/top_level.txt
+[1.438s] reading manifest file '../../build/dobot_moveit/dobot_moveit.egg-info/SOURCES.txt'
+[1.439s] writing manifest file '../../build/dobot_moveit/dobot_moveit.egg-info/SOURCES.txt'
+[1.439s] running build
+[1.439s] running build_py
+[1.440s] running install
+[1.443s] running install_lib
+[1.458s] running install_data
+[1.458s] running install_egg_info
+[1.474s] removing '/home/erds/barns_ws/install/dobot_moveit/lib/python3.10/site-packages/dobot_moveit-0.0.0-py3.10.egg-info' (and everything under it)
+[1.475s] Copying ../../build/dobot_moveit/dobot_moveit.egg-info to /home/erds/barns_ws/install/dobot_moveit/lib/python3.10/site-packages/dobot_moveit-0.0.0-py3.10.egg-info
+[1.476s] running install_scripts
+[1.594s] writing list of installed files to '/home/erds/barns_ws/build/dobot_moveit/install.log'
+[1.625s] Invoked command in '/home/erds/barns_ws/src/dobot_moveit' returned '0': PYTHONPATH=/home/erds/barns_ws/build/dobot_moveit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/erds/barns_ws/install/dobot_moveit/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dobot_moveit build --build-base /home/erds/barns_ws/build/dobot_moveit/build install --record /home/erds/barns_ws/build/dobot_moveit/install.log --single-version-externally-managed install_data

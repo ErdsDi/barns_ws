@@ -12,7 +12,8 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name, ['share/aruco_config.yaml']),
         ('share/' + package_name, ['share/aruco_calibration.yaml']),
-        ('share/' + package_name, ['share/arucoID_match.yaml'])
+        ('share/' + package_name, ['share/arucoID_match.yaml']),
+        ('share/' + package_name, ['share/mount_offsets.yaml'])
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -26,6 +27,8 @@ setup(
             'aruco_perception = pickn_place.aruco_perception:main',
             'perception_transform = pickn_place.perception_transform:main',
             'calibrate_aruco = pickn_place.calibrate_aruco:main',
+            'calibrate_tool_mount = pickn_place.calibrate_tool_mount:main',
+            'mount_frame_generator = pickn_place.mount_frame_generator:main'
         ],
     },
 )
